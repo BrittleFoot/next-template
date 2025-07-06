@@ -1,4 +1,3 @@
-import { Button } from "@/components/ui/button"
 import {
   Card,
   CardAction,
@@ -8,6 +7,7 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card"
+import Image from "next/image"
 
 export default function Home() {
   return (
@@ -20,7 +20,13 @@ export default function Home() {
               Lorem ipsum dolor sit amet consectetur adipisicing elit
             </CardDescription>
             <CardAction>
-              <Button variant="link">sit amet</Button>
+              <Image
+                src="/cat.avif"
+                alt="cat"
+                width={500}
+                height={500}
+                className="aspect-square h-12 w-12 rounded-full object-cover"
+              />
             </CardAction>
           </CardHeader>
           <CardContent>
@@ -30,8 +36,10 @@ export default function Home() {
             culpa suscipit quaerat accusamus!
           </CardContent>
           <CardFooter className="text-sm text-muted-foreground">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam,
-            quos.
+            <div>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam,
+              quos.
+            </div>
           </CardFooter>
         </Card>
       </div>
